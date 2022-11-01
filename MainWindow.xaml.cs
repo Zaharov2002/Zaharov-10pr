@@ -29,5 +29,15 @@ namespace Zaharov_10pr
         {
             listbox1.Items.Add(textBox1.Text);
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            listbox1.Items.Remove(textBox1.Text);
+        }
+
+        private void Sort_Click(object sender, RoutedEventArgs e)
+        {
+            listbox1.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription("Content", System.ComponentModel.ListSortDirection.Ascending));
+        }
     }
 }
